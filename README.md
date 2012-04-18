@@ -1,10 +1,10 @@
-# [Roots Theme](http://rootstheme.com/)
+# [Roots Annex Theme](http://rootstheme.com/)
 
-Roots is a starting WordPress theme made for developers that’s based on [HTML5 Boilerplate](http://html5boilerplate.com/) and Bootstrap from Twitter.
+Roots Annex is a starting WordPress theme made for developers that’s based on [HTML5 Boilerplate](http://html5boilerplate.com/) and [Bootstrap from Twitter](http://twitter.github.com/bootstrap) with a [modified admin panel](https://github.com/asuh/HTML5Boilerplate-Starkers-WordPress-Theme) from [Aaron Grogg's Boilerplate](http://wordpress.org/extend/themes/boilerplate).
 
 ## Quick start
 
-* Clone the git repo - `git clone git://github.com/retlehs/roots.git` - or [download it](https://github.com/retlehs/roots/zipball/master)
+* Clone the git repo - `git clone git://github.com/asuh/Html5-Boilerplate-Roots.git` - or [download it](https://github.com/asuh/Html5-Boilerplate-Roots/zipball/master)
 * Read [Theme Activation](https://github.com/retlehs/roots/wiki/Theme-activation) to understand everything that happens once you activate Roots
 
 ## Features
