@@ -17,7 +17,6 @@ require_once locate_template('/inc/roots-cleanup.php');     // cleanup
 require_once locate_template('/inc/roots-scripts.php');     // modified scripts output
 require_once locate_template('/inc/roots-htaccess.php');    // rewrites for assets, h5bp htaccess
 require_once locate_template('/inc/roots-hooks.php');       // hooks
-require_once locate_template('/inc/roots-actions.php');     // actions
 require_once locate_template('/inc/roots-widgets.php');     // widgets
 require_once locate_template('/inc/roots-custom.php');      // custom functions
 
