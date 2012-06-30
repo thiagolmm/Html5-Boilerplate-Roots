@@ -13,7 +13,7 @@
 
 </head>
 
-<body <?php body_class(roots_body_class()); ?>>
+<body <?php body_class(); ?>>
   <?php ie_chrome_frame(); ?>
 
   <?php roots_header_before(); ?>
