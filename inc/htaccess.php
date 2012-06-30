@@ -4,14 +4,14 @@
 // https://github.com/retlehs/roots/wiki/Nginx
 // https://github.com/retlehs/roots/wiki/Lighttpd
 
-if (stristr($_SERVER['SERVER_SOFTWARE'], 'apache') || stristr($_SERVER['SERVER_SOFTWARE'], 'litespeed') !== false)  {
+if (stristr($_SERVER['SERVER_SOFTWARE'], 'apache') || stristr($_SERVER['SERVER_SOFTWARE'], 'litespeed') !== false) {
 
   function roots_htaccess_writable() {
     if (!is_writable(get_home_path() . '.htaccess')) {
       if (current_user_can('administrator')) {
         add_action('admin_notices', create_function('', "echo '<div class=\"error\"><p>" . sprintf(__('Please make sure your <a href="%s">.htaccess</a> file is writable ', 'roots'), admin_url('options-permalink.php')) . "</p></div>';"));
       }
-    };
+    }
   }
 
   add_action('admin_init', 'roots_htaccess_writable');
@@ -44,9 +44,15 @@ if (stristr($_SERVER['SERVER_SOFTWARE'], 'apache') || stristr($_SERVER['SERVER_S
 
   // only use clean urls if the theme isn't a child or an MU (Network) install
   if (!is_multisite() && !is_child_theme() && get_option('permalink_structure')) {
-    add_action('generate_rewrite_rules', 'roots_add_rewrites');
-    add_action('generate_rewrite_rules', 'roots_add_h5bp_htaccess');
-    if (!is_admin()) {
+    if (current_theme_supports('rewrite-urls')) {
+      add_action('generate_rewrite_rules', 'roots_add_rewrites');
+    }
+
+    if (current_theme_supports('h5bp-htaccess')) {
+      add_action('generate_rewrite_rules', 'roots_add_h5bp_htaccess');
+    }
+
+    if (!is_admin() && current_theme_supports('rewrite-urls')) {
       $tags = array(
         'plugins_url',
         'bloginfo',

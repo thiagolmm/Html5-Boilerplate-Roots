@@ -13,7 +13,7 @@ body { }
 #banner { }
 
 /* Fixed Topbar Navigation */
-body { padding-top: 60px; }
+body.top-navbar { padding-top: 60px; }
 body.admin-bar .navbar-fixed-top { top: 28px; }
 
 
@@ -86,6 +86,8 @@ ol.commentlist img.avatar { float: left; margin-right: 10px; }
 .alignleft { margin: 0 20px 20px 0; float: left; }
 .alignright { margin: 0 0 20px 20px; float: right; }
 
+figure.alignnone { margin-left: 0; margin-right: 0; }
+
 
 
 /* =============================================================================
@@ -94,7 +96,7 @@ ol.commentlist img.avatar { float: left; margin-right: 10px; }
 
 @media (max-width: 979px) {
   /* Fix top padding when using the responsive grid with the fixed topbar */
-  body {
+  body.top-navbar {
     padding-top: 0;
   }
 }
